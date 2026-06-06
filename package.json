@@ -1,0 +1,19 @@
+{
+  "name": "middle-earth-brick-index-netlify",
+  "version": "1.0.0",
+  "description": "LEGO Lord of the Rings & Hobbit price tracker on Netlify",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "npm install"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^6.0.0",
+    "@netlify/functions": "^2.0.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5"
+  }
+}

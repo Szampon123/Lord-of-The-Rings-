@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Middle-earth Brick Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="vignette"></div>
+
+  <header class="masthead">
+    <div class="rule"></div>
+    <p class="overline">A ledger of the works of Middle-earth, rendered in brick</p>
+    <h1>Middle-earth Brick&nbsp;Index</h1>
+    <p class="sub">LEGO® <em>The Lord of the Rings</em> &amp; <em>The Hobbit</em> — prices drawn from Brickset</p>
+    <div class="status-line">
+      <span id="status">Summoning the archive…</span>
+      <button id="refresh" title="Re-read the latest prices">Refresh</button>
+    </div>
+    <div class="rule"></div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="new" class="active">New &amp; Sealed</button>
+    <button data-tab="used">Used</button>
+    <button data-tab="minifigs">Minifigures</button>
+  </nav>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="Search by name or set number…" />
+    <select id="theme">
+      <option value="">All realms</option>
+    </select>
+    <select id="sort">
+      <option value="year">Newest first</option>
+      <option value="price-desc">Price: high → low</option>
+      <option value="price-asc">Price: low → high</option>
+      <option value="name">Name (A→Z)</option>
+      <option value="pieces">Pieces (most first)</option>
+    </select>
+  </section>
+
+  <main id="content"><div class="empty">Loading…</div></main>
+
+  <footer>
+    <p>
+      Retail (new) prices via the official Brickset API. Used-set and minifigure
+      values are BrickLink-sourced figures shown on Brickset and depend on your
+      configured provider. LEGO® is a trademark of the LEGO Group, which does not
+      sponsor or endorse this project.
+    </p>
+    <p id="generated"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

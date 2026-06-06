@@ -1,0 +1,6 @@
+node_modules/
+.env
+# local live cache (keep the committed sample only)
+server/data/catalog.json
+*.log
+.DS_Store
