@@ -14,10 +14,15 @@ export default async (req, context) => {
       }
     )
   } catch (err) {
-    console.error('[refresh] error:', err.message)
-    return new Response(JSON.stringify({ ok: false, error: err.message }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    })
+    console.error('[refresh] full error:', err)
+    console.error('[refresh] message:', err?.message)
+    console.error('[refresh] stack:', err?.stack)
+    return new Response(
+      JSON.stringify({ ok: false, error: err?.message || 'Unknown error' }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    )
   }
 }
