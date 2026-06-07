@@ -1,9 +1,8 @@
-import { schedule } from '@netlify/functions'
 import { runRefresh } from '../../lib/refresh.js'
 
-export const handler = schedule('@daily', async () => {
+export const handler = async (event, context) => {
   try {
-    console.log(`[scheduled-refresh] starting (${new Date().toISOString()})`)
+    console.log(`[scheduled-refresh] starting`)
     const payload = await runRefresh()
     console.log(
       `[scheduled-refresh] done: ${payload?.meta?.setCount ?? 0} sets`
@@ -25,4 +24,4 @@ export const handler = schedule('@daily', async () => {
       }),
     }
   }
-})
+}
