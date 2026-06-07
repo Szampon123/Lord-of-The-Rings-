@@ -1,4 +1,3 @@
-import 'dotenv/config';
 
 function list(value, fallback) {
   return (value ?? fallback)
