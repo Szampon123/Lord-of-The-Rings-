@@ -1,8 +1,4 @@
 import 'dotenv/config';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function list(value, fallback) {
   return (value ?? fallback)
@@ -33,10 +29,9 @@ export const config = {
   primaryRetailCountry: 'US',
 
   paths: {
-    // On Netlify, config is in lib/; root is two levels up
-    root: path.resolve(__dirname, '..'),
-    public: path.resolve(__dirname, '..', 'public'),
-    // Note: cacheFile is not used on Netlify (Blobs handles storage)
+    // Paths are not used on Netlify (only for local Express dev)
+    root: null,
+    public: null,
     cacheFile: null,
   },
 
