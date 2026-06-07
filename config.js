@@ -28,12 +28,7 @@ export const config = {
   // The country whose retail price we treat as the headline figure.
   primaryRetailCountry: 'US',
 
-  paths: {
-    // Paths are not used on Netlify (only for local Express dev)
-    root: null,
-    public: null,
-    cacheFile: null,
-  },
+  // Paths are not used on Netlify (only for local Express dev)
 
   bricksetBase: 'https://brickset.com',
   apiBase: 'https://brickset.com/api/v3.asmx',
